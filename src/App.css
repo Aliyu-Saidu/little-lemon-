@@ -1,38 +1,385 @@
-.App {
-  text-align: center;
+
+* {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Root */
+#root {
+ min-height: 100vh;
+ display: grid;
+ grid-template-rows: auto 1fr auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+ background-color: #f4ce14;
+ color: #333;
+ font-weight: bold;
+ border: none;
+ border-radius: 0.25rem;
+ padding: 0.5rem 1rem;
+}
+/* Header Start*/
+
+.header-section {
+ padding: 2rem;
+ max-width: 70%;
+ margin: auto;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header .nav-links {
+ list-style-type: none;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 0.5rem;
+}
+.header .link {
+ display: block;
+ text-decoration: none;
+ padding: 0.5rem 1rem;
+ color: black;
+ font-weight: bold;
+}
+
+/* Header End*/
+
+
+/* Main Start */
+
+/* Home Page Start*/
+.banner {
+ background-color: #495E57;
+ padding: 2rem;
+}
+.banner_wrapper {
+ max-width: 70%;
+ min-width: 300px;
+ margin: auto;
+}
+.banner_img {
+ width: 250px;
+ height: 300px;
+ margin-top: 5px;
+ object-fit: cover;
+ border-radius: 10px;
+ float: right;
+}
+.banner h1 {
+ font-size: 2.5rem;
+ color: hsl(50, 71%, 42%);
+}
+.banner h2 {
+ color: #EDEFEE;
+}
+.banner p {
+ width: 250px;
+ margin-top: 1rem;
+ color: #EDEFEE;
+}
+.banner a {
+ display: inline-block;
+ text-decoration: none;
+ background-color: hsl(50, 91%, 52%);
+ border-radius: 0.25rem;
+ color: black;
+ padding: 0.25rem 1rem;
+ margin-top: 1rem;
+ font-weight: bold;
+}
+
+@media screen and (max-width: 740px) {
+ .banner_img {
+  float:none;
+ }
+ .banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+
+}
+
+/***** Media Query Start *****/
+@media screen and (max-width: 480px) {
+ .header .nav-links {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ }
+ .header-section {
+  justify-content: center;
+  align-items: center;
+ }
+ .banner_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+ .menu_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+ .bottom_msg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+ .little_lemon {
+  text-align: center;
+  margin-bottom: 2rem;
+ }
+ .little_lemon p {
+  margin: auto;
+ }
 }
 
-.App-link {
-  color: #61dafb;
+/***** End of Media Query *****/
+
+
+.special_menu {
+ clear: both;
+ padding: 2rem;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.menu_header {
+ padding: 2rem;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ gap: 2rem;
+}
+.menu_header .btn {
+ padding: 0.75rem 1.2rem;
+ font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.special_menu h2 {
+ font-size: 2rem;
+ text-align: center;
+ margin: 2rem 2rem 2rem 0;
+
 }
+.menu_content {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(auto, 250px));
+ justify-content: center;
+ gap: 2rem;
+ padding: 2rem;
+ width: 80%;
+ margin: auto;
+}
+.specials {
+ display: flex;
+ flex-direction: column;
+}
+.specials img {
+ width: 100%;
+ height: 200px;
+ object-fit: cover;
+ object-position: center;
+ flex-grow: 1;
+}
+
+.special_items {
+ background-color: #EDEFEE;
+ flex-grow: 1;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
+.items_header {
+ display: flex;
+ justify-content: space-between;
+ margin: 0.5rem 0;
+ padding: 0.25rem;
+}
+
+.special_items p {
+ margin: 0.5rem 0 2rem 0;
+ padding: 0.25rem;
+}
+
+.header_testimonials {
+ text-align: center;
+ margin: 1.5rem 0;
+}
+.testimonials {
+ display: flex;
+ flex-direction: column;
+ background-color: #EDEFEE;
+ border-radius: 0.25rem;
+ padding: 0.5rem;
+ padding-bottom: 2rem;
+ justify-content: center;
+}
+.testimonials img {
+ width: 80px;
+ border-radius: 50%;
+}
+.testimonials h3 {
+ margin: 1rem;
+ margin-left: 0;
+}
+.customer_say {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(auto, 250px));
+ justify-content: center;
+ gap: 2rem;
+ padding: 2rem;
+}
+
+.bottom_msg {
+ padding: 2rem;
+ background-color: #f4ce14;
+
+ display: flex;
+ justify-content: space-around;
+}
+.bottom_msg .little_lemon h1{
+ color: #495E57;
+ font-size: 2rem;
+}
+.bottom_msg .little_lemon h2 {
+ color: #333;
+}
+.bottom_msg .little_lemon p {
+ width: 50%;
+ margin-top: 2rem;
+ color: #333;
+}
+/***** Home Page End *****/
+
+/***** Error *****/
+.error-input {
+ border: 1px solid hsl(19, 78%, 59%);
+}
+.error-input-parent {
+ position: relative;
+}
+span {
+ color: hsl(19, 78%, 59%);
+}
+
+/***** About Page Start *****/
+
+/***** About Page End *****/
+
+
+/***** Menu Page Start *****/
+
+/***** Menu Page End *****/
+
+
+/***** Reservation Page Start *****/
+.booking_page {
+ display: flex;
+ padding: 1.25rem;
+}
+.booking_form {
+ background-color: #495E57;
+ max-width: 30rem;
+ min-width: 20rem;
+ padding: 2rem;
+ border-radius: 0.25rem;
+ color: #EDEFEE;
+ margin: auto;
+
+ display: flex;
+ flex-direction: column;
+ gap: 0.75rem;
+}
+
+.time-date-wraper {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 1rem;
+}
+.time-date-wraper p {
+ font-size: 0.8rem;
+ font-weight: regualar;
+ color: #fbdabb;
+}
+.booking_form .error {
+ font-size: 0.8rem;
+ font-weight: bold;
+ color: hsl(19, 78%, 59%);
+}
+
+label {
+ display: block;
+ font-weight: regular;
+ font-family: markazi;
+ font-size: 18px;
+}
+
+input, select {
+ padding: 0.25rem 1rem;
+ border: none;
+ border-radius: 0.25rem;
+ width: 100%;
+}
+textarea {
+ width: 100%;
+ height: 10rem;
+ border-radius: 0.25rem;
+ resize: none;
+ padding: 0.5rem;
+}
+
+
+/***** Reservation Page End *****/
+
+
+/***** Order Online Page Start *****/
+
+/***** Order Online Page End *****/
+
+
+/***** Login Page Start *****/
+
+/***** Login Page End *****/
+
+
+
+/***** Main End *****/
+
+
+/* Footer Start */
+.footer {
+ padding: 1.2rem 3rem;
+ background-color: #495E57;
+ display: flex;
+ justify-content: space-between;
+}
+.footer a {
+ color: #EDEFEE;
+ display: block;
+ transition: all 0.3s;
+}
+.footer a:hover {
+ text-decoration: none;
+}
+.footer .nav-links {
+ list-style-type: none;
+ /* text-align: center; */
+}
+.footer .link {
+ padding-bottom: 0.5rem;
+}
+
+/* Footer End */

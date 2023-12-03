@@ -1,11 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// import './App.css';
+import Header from './components/Header';
+import Main from './pages/Main';
+import Footer from './components/Footer';
+import { BrowserRouter } from 'react-router-dom';
+
+
 
 function App() {
   return (
-    <div className="App">
-      Little Lemon
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Main />
+      <Footer />
+    </BrowserRouter>
   );
 }
 
